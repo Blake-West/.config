@@ -1,7 +1,7 @@
 # Starship Configuration
 # Save this as ~/.config/starship.toml
 
-# Configure the prompt format
+# Configure the prompt format - $all includes all detected languages
 format = """
 $username\
 $hostname\
@@ -9,6 +9,7 @@ $time\
 $directory\
 $git_branch\
 $git_status\
+$all\
 $line_break\
 $character"""
 
@@ -44,7 +45,7 @@ truncation_symbol = "…/"
 [git_branch]
 symbol = " "
 style = "bold purple"
-format = "on [$symbol$branch]($style) "
+format = "on[$symbol$branch]($style) "
 
 # Git status module
 [git_status]
@@ -68,21 +69,9 @@ success_symbol = "[❯](bold green)"
 error_symbol = "[❯](bold red)"
 vicmd_symbol = "[❮](bold yellow)"
 
-# Disable modules we don't need
-[package]
-disabled = true
-
-[nodejs]
-disabled = true
-
-[python]
-disabled = true
-
-[rust]
-disabled = true
-
-[java]
-disabled = true
-
-[golang]
-disabled = true
+# Optional: Configure specific language styles if desired
+# [nodejs]
+# style = "bold green"
+# 
+# [python] 
+# style = "bold yellow"
