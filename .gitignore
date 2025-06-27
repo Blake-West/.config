@@ -1,24 +1,10 @@
+# Ignore everything, add piece by piece
+*
 
+!*/
 
-# Ignore ever directory here by default because it is the .config after all...
-abrt
-autostart
-dconf
-discord
-dleyna-renderer-service.conf
-evolution
-GNOME-*
-gnome-*
-goa-1.0
-google-chrome
-.gsd-keyboard.settings-ported
-gtk-*
-ibus
-monitors.xml
-monitors.xml~
-nautilus
-pulse
-user-dirs.dirs
-user-dirs.locale
-xdg-terminals.list
-yelp
+!nvim
+!.gitignore
+!ghostty/
+!alacritty
+!starship.toml

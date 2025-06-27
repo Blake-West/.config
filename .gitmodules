@@ -1,9 +1,6 @@
-[submodule "alacritty/themes"]
-	path = alacritty/themes
-	url = https://github.com/alacritty/alacritty-theme
 [submodule "nvim"]
 	path = nvim
 	url = git@github.com:Blake-West/nvim.git
-[submodule "alacritty"]
-	path = alacritty
-	url = git@github.com:Blake-West/alacritty.git
+[submodule "ghostty"]
+	path = ghostty
+	url = git@github.com:Blake-West/ghostty.git

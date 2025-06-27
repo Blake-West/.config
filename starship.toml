@@ -1,0 +1,88 @@
+# Starship Configuration
+# Save this as ~/.config/starship.toml
+
+# Configure the prompt format
+format = """
+$username\
+$hostname\
+$time\
+$directory\
+$git_branch\
+$git_status\
+$line_break\
+$character"""
+
+# Username module
+[username]
+style_user = "bold blue"
+style_root = "bold red"
+format = "[$user]($style)"
+disabled = false
+show_always = true
+
+# Hostname module
+[hostname]
+ssh_only = false
+format = "@[$hostname](bold green) "
+disabled = false
+
+# Time module
+[time]
+disabled = false
+format = "[$time](bold yellow) "
+time_format = "%H:%M:%S"
+
+# Directory module - shows parent and current directory
+[directory]
+style = "bold cyan"
+format = "[$path]($style) "
+truncation_length = 2
+truncate_to_repo = false
+truncation_symbol = "…/"
+
+# Git branch module
+[git_branch]
+symbol = " "
+style = "bold purple"
+format = "on [$symbol$branch]($style) "
+
+# Git status module
+[git_status]
+style = "bold red"
+format = "[$all_status$ahead_behind]($style)"
+conflicted = "⚡"
+ahead = "⇡${count}"
+behind = "⇣${count}"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+up_to_date = ""
+untracked = "?${count}"
+stashed = "$${count}"
+modified = "!${count}"
+staged = "+${count}"
+renamed = "»${count}"
+deleted = "✘${count}"
+
+# Character module (the prompt symbol)
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
+vicmd_symbol = "[❮](bold yellow)"
+
+# Disable modules we don't need
+[package]
+disabled = true
+
+[nodejs]
+disabled = true
+
+[python]
+disabled = true
+
+[rust]
+disabled = true
+
+[java]
+disabled = true
+
+[golang]
+disabled = true
